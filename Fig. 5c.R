@@ -1,5 +1,5 @@
 rm (list=ls())
-setwd("~/Documents/NCSU/RNAseq_CMM_BL_Unique/Paper_Fig.5/")
+setwd("")
 
 library(plyr)
 library(ggplot2)
