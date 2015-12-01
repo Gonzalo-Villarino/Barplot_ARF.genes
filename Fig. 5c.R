@@ -5,12 +5,16 @@ library(plyr)
 library(ggplot2)
 library(bear)
 
-### Barplot for Fig. 5b first 
-tgc <- read.table("Fig5c_avg.txt",header=TRUE,sep="\t")
-#tgc = tgc[,-1]
-max_min = read.table("Fig5_MaxMin.txt",header=TRUE,sep="\t")
+############################################################################# 
+# Barplot for Fig. first 
+############################################################################# 
+
+tgc <- read.table("Fig5c_avg.txt",header=TRUE,sep="\t") # barplot values
+
+max_min = read.table("Fig5_MaxMin.txt",header=TRUE,sep="\t") # error bars
 max_min = max_min[,-1]
 
+# Make a character list with all samples and gene names
 celltype = rep(c("YFP_NEG","YFP_POS","NO_SORT","ALL_SORT"),5)
 genes = c(rep("ARF2",4),rep("ARF3",4),rep("ARF4",4),rep("TAS3",4),rep("TAS3b",4))
 
@@ -19,6 +23,7 @@ celltype = factor(celltype,levels=c("YFP_NEG","YFP_POS","NO_SORT","ALL_SORT"))
 
 dat = data.frame(celltype=celltype,genes=genes)
 
+# loop to FKPM values to genes
 fpkm = c()
 for(i in 1:nrow(tgc)){
         tmp = c(tgc[i,2],tgc[i,3],tgc[i,4],tgc[i,5],tgc[i,6])
@@ -45,9 +50,10 @@ ggplot(data=dat, aes(x=celltype, y=fpkm, group=genes, fill=genes)) +
        width=.2,
        position=position_dodge(0.9)) + theme_minimal()
 
-###
-#line 
 
+############################################################################# 
+# Line graph  
+############################################################################# 
 ggplot(data=dat, aes(x=celltype, y=fpkm, group=genes, colour=genes)) +
         geom_line() + geom_point()+
         geom_errorbar(aes(ymin= min,ymax= max),size=.5,
