@@ -1,3 +1,4 @@
-# Barplot_ARF.genes
+#### Barplot_ARF.genes
 
-# You can get the the values for FPKM avg and values for the erros bar from the genes.fpkm_tracking, YFP_POS_conf_lo	YFP_POS_conf_hi
+##### * You can get the the values for FPKM avg from the cuffdiff output 'genes.fpkm_tracking'
+##### * From the same file you can get the erros bar using conf_lo and conf_hi [YFP_POS_conf_lo	YFP_POS_conf_hi]
