@@ -1,7 +1,6 @@
-
-YFP_NEG	YFP_NEG	YFP_POS	YFP_POS	NO_SORT	NO_SORT	ALL_SORT	ALL_SORT
-ARF2	100	60	150	135	115	100	117	100
-ARF3	25	10	85	74	51	45	45	40
-ARF4	17	12	33	30	38	33	28	20
-TAS3	21	18	5	3	40	29	18	10
-TAS3b	18	9	4	1	20	15	9	7
+Gene 	YFP_NEG	 YFP_NEG	YFP_POS	YFP_POS	 NO_SORT	NO_SORT	 ALL_SORT	 ALL_SORT
+ARF2	  100	      60     	150	    135     	115	    100	   117	      100
+ARF3  	25	      10	    85	    74      	51    	45    	45       	40
+ARF4  	17	      12    	33    	30	      38	    33	    28      	20
+TAS3  	21     	  18    	5	      3	        40	    29      18      	10
+TAS3b	  18     	  9	      4	      1	        20	    15      9	        7
